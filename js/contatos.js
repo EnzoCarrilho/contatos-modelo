@@ -8,6 +8,13 @@ export async function lerContatos(){
     return contatos
 }
 
+async function buscarContatoId(id) {
+    const url = "https://bakcend-fecaf-render.onrender.com/contatos"
+    const response = await fetch(url)
+    const contato = await response.json()
+    return contato
+}
+
 
 export async function criarContato(contato){
     const url = "https://bakcend-fecaf-render.onrender.com/contatos"
