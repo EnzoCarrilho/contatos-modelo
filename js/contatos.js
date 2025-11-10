@@ -9,7 +9,7 @@ export async function lerContatos(){
 }
 
 
-async function criarContato(contato){
+export async function criarContato(contato){
     const url = "https://bakcend-fecaf-render.onrender.com/contatos"
     const options = {
         method: "POST",
@@ -50,13 +50,15 @@ async function atualizarContato(id, contato){
 
 
 const novoContato = {
-    "nome": "Gus Fring",
+    "nome": ":(",
     "celular": "11 9 1345-5678",
-    "foto": "https://static.wikia.nocookie.net/viloes/images/6/64/BCS_S4_Gustavo_Fring.webp/revision/latest?cb=20221030013357&path-prefix=pt-br",
+    "foto": "",
     "email": "LosPollosHermanos@gmail.com",
     "endereco": "Los Pollos Hermanos",
     "cidade": ""
 }
+
+
 
 
 

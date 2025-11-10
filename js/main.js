@@ -1,11 +1,11 @@
 'use strict'
 
-import { lerContatos } from "./contatos.js" 
-
+import { lerContatos  } from "./contatos.js" 
+import { criarContato } from "./contatos.js"
 
 const contatos = await lerContatos()
 
-function criarContato(contato){
+function criarCardContatos(contato){
     const container = document.getElementById('container')
 
     const cardContato = document.createElement('div')
@@ -25,16 +25,51 @@ function criarContato(contato){
 }
 
 for(let i = 0; i < contatos.length; i++){
-    criarContato(contatos[i])
+    criarCardContatos(contatos[i])
 }
 
-const buttonNovoContato = document.getElementById('novo-contato')
 
+const buttonNovoContato = document.getElementById('novo-contato')
 
 buttonNovoContato.addEventListener('click', () => {
     const main = document.querySelector('.card-show')
     main.className = 'form-show'
 })
+
+const buttonCancelar = document.getElementById('cancelar')
+
+buttonCancelar.addEventListener('click', () => {
+    const main = document.querySelector('.form-show')
+    main.classList = 'card-show'
+})
+
+function criarNovoContato(){
+  
+    const novoContato = {
+        "nome": document.getElementById('nome').value,
+        "celular": document.getElementById('celular').value,
+        "foto": document.getElementById('foto').src,
+        "email": document.getElementById('email').value,
+        "endereco": document.getElementById('endereco').value,
+        "cidade": document.getElementById('cidade').value
+    }
+
+    criarContato(novoContato)
+
+
+}
+
+const buttonSalvar = document.getElementById('salvar')
+buttonSalvar.addEventListener('click', () => {
+    criarNovoContato()
+
+})
+
+
+
+
+
+
 
 
 
