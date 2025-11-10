@@ -2,6 +2,7 @@
 
 import { lerContatos } from "./contatos.js" 
 
+
 const contatos = await lerContatos()
 
 function criarContato(contato){
@@ -26,6 +27,14 @@ function criarContato(contato){
 for(let i = 0; i < contatos.length; i++){
     criarContato(contatos[i])
 }
+
+const buttonNovoContato = document.getElementById('novo-contato')
+
+
+buttonNovoContato.addEventListener('click', () => {
+    const main = document.querySelector('.card-show')
+    main.className = 'form-show'
+})
 
 
 

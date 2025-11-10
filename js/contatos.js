@@ -50,12 +50,14 @@ async function atualizarContato(id, contato){
 
 
 const novoContato = {
-    "nome": "",
+    "nome": "Gus Fring",
     "celular": "11 9 1345-5678",
-    "foto": "",
-    "email": "",
-    "endereco": "",
+    "foto": "https://static.wikia.nocookie.net/viloes/images/6/64/BCS_S4_Gustavo_Fring.webp/revision/latest?cb=20221030013357&path-prefix=pt-br",
+    "email": "LosPollosHermanos@gmail.com",
+    "endereco": "Los Pollos Hermanos",
     "cidade": ""
 }
+
+
 
 
