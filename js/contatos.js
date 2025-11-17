@@ -8,7 +8,7 @@ export async function lerContatos(){
     return contatos
 }
 
-async function buscarContatoId(id) {
+export async function buscarContatoId(id) {
     const url = "https://bakcend-fecaf-render.onrender.com/contatos"
     const response = await fetch(url)
     const contato = await response.json()
@@ -30,7 +30,7 @@ export async function criarContato(contato){
     return response.ok
 }
 
-async function deletarContato(id){
+export async function deletarContato(id){
     const url = `https://bakcend-fecaf-render.onrender.com/contatos/${id}`
     const options = {
         method: "DELETE",
